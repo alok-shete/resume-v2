@@ -1,0 +1,98 @@
+/* home */
+.text-center {
+  text-align: center;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.btn-git {
+  background-color: rgb(40, 44, 52);
+  margin-top: 20px;
+  color: #f3f3f3;
+  text-decoration: none;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  outline: none;
+  transition: 0.2s all;
+}
+
+.btn-git:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn-git-logo {
+  vertical-align: middle;
+  padding: 0 10px;
+}
+
+/* projects */
+
+.route-panel {
+  padding: 2vw;
+}
+
+.heading {
+  font-size: 22px;
+  color: #42a5f5;
+  font-family: "Ubuntu Mono" monospace;
+}
+
+.card {
+  padding: 20px 20px;
+  padding-left: 5vw;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+}
+
+.card-icon {
+  color: #f3f3f3;
+  font-size: 20px;
+}
+
+.card-title {
+  color: #f3f3f3;
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+.un-ordered-list {
+  padding-left: 6vh;
+  list-style-type: square;
+  color: #abb2bf;
+  letter-spacing: 0.5px;
+}
+
+.un-ordered-list li {
+  padding: 2px 0;
+}
+
+.mt-5 {
+  margin-top: 15px;
+}
+
+.fs17 {
+  font-size: 17px;
+}
+
+.sub-un-ordered-list {
+  padding-left: 6vh;
+}
+
+.text-white {
+  color: #f3f3f3;
+}
