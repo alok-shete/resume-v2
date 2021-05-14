@@ -1,95 +1,42 @@
+/* top panel */
 .top-panel {
   color: #f3f3f3;
   height: 30px;
   background-color: rgb(40, 44, 52);
+  text-align: center;
+  font-size: 14px;
+  padding-top: 7px;
 }
 
-.main-panel {
-  background-color: #d9deda;
+/* --------------------------------------------------------- */
+/* left panel */
+.left-panel {
   position: absolute;
   top: 30px;
   bottom: 0;
-  width: 100%;
-  display: flex;
-}
-
-.left-panel .right-panel {
-  -ms-flex: 1; /* IE 10 */
-  flex: 1;
-}
-
-.left-panel {
-  height: 100%;
   width: 40px;
-  min-width: 40px;
   background-color: rgb(40, 44, 52);
 }
-
+/* ----------------------------------------------------------- */
+/* right panel */
 .right-panel {
-  height: 100%;
-  width: 100%;
-  background-color: #333842;
-}
-
-/* left panel nav */
-.left-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.left-nav-item a {
-  display: block;
-  color: #f3f3f3;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-}
-
-.left-nav-active {
-  border-left: 2px solid rgb(255, 69, 0);
-  /* background-color: #333842; */
-}
-
-.left-nav-icon {
-  font-size: 22px;
-  color: rgb(171, 178, 191);
-}
-
-.left-bottom-nav {
   position: absolute;
-  bottom: 30px;
-  width: 40px;
-  min-width: 40px;
+  top: 30px;
+  height: 37px;
+  left: 40px;
+  right: 0;
+  background-color: tomato;
 }
 
-/* right panel nav */
-.right-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(40, 44, 52);
-}
-
-.right-nav-item {
-  float: left;
-}
-
-.right-nav-item a {
-  display: block;
-  color: #f3f3f3;
-  font-size: 13px;
-  text-align: center;
-  padding: 10px 16px;
-  text-decoration: none;
-}
-
-.right-nav-active {
-  border-top: 1px solid rgb(255, 69, 0);
+.main-panel {
+  position: absolute;
+  top: 66.5px;
+  bottom: 20px;
+  left: 40px;
+  right: 0;
+  color: hsl(0, 0%, 95%);
   background-color: #333842;
+  overflow-y: auto;
 }
 
 /* footer */
@@ -106,17 +53,4 @@
 .git-master {
   font-size: 12.4px;
   padding: 0 20px;
-}
-
-/* main content */
-
-.route-content {
-  position: absolute;
-  top: 39px;
-  bottom: 20px;
-  right: 0;
-  left: 40px;
-  color: hsl(0, 0%, 95%);
-  background-color: #333842;
-  overflow-y: auto;
 }

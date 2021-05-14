@@ -1,0 +1,36 @@
+/* left panel nav */
+.left-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.left-nav-item a {
+  display: block;
+  color: #f3f3f3;
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.left-nav-active {
+  border-left: 2px solid rgb(255, 69, 0);
+  /* background-color: #333842; */
+}
+
+.left-nav-icon {
+  font-size: 22px;
+  color: rgb(171, 178, 191);
+}
+
+.left-bottom-nav {
+  position: absolute;
+  bottom: 30px;
+  width: 40px;
+  min-width: 40px;
+}
+
+/* margin  */

@@ -11,8 +11,15 @@ export default function Home() {
           <strong>Alok Shete</strong>
           <br />
           <ReactTypingEffect
-            text={["Full Stack Web Dev Developer", "Quick Learner"]}
+            text={[
+              "Full Stack Web Developer",
+              "Problem Solver",
+              "MREN Stack Developer",
+              "Quick Learner",
+              "MEAN Stack Developer",
+            ]}
             speed={100}
+            eraseSpeed={50}
             eraseDelay={1000}
             typingDelay={500}
           />

@@ -1,0 +1,28 @@
+/* right nav */
+.right-panel-scroll-menu {
+  background-color: #333;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  min-height: 50px;
+}
+
+.right-panel-scroll-menu a {
+  border: 1px solid #333842;
+  display: inline-block;
+  font-size: 13px;
+  color: #abb2bf;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.right-panel-scroll-menu .active {
+  background-color: #777;
+}
+
+.right-nav-active {
+  border-top: 1px solid rgb(255, 69, 0) !important;
+  background-color: #333842;
+  color: rgb(230, 233, 240) !important;
+}

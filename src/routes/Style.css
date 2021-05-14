@@ -18,7 +18,7 @@
   color: #f3f3f3;
   text-decoration: none;
   border: none;
-  padding: 15px 40px;
+  padding: 15px 40px 15px 28px;
   font-size: 16px;
   border-radius: 5px;
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.5);
@@ -49,8 +49,11 @@
   font-family: "Ubuntu Mono" monospace;
 }
 
+.project {
+  padding-top: 20px;
+}
+
 .card {
-  padding: 20px 20px;
   padding-left: 5vw;
 }
 
@@ -65,9 +68,30 @@
 }
 
 .card-title {
+  display: inline-block;
+  position: relative;
   color: #f3f3f3;
-  padding-left: 10px;
+  margin-left: 10px;
   font-size: 18px;
+  text-decoration: none;
+}
+
+.card-title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f3f3f3;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.card-title:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .un-ordered-list {
@@ -75,14 +99,11 @@
   list-style-type: square;
   color: #abb2bf;
   letter-spacing: 0.5px;
+  margin: 15px 0 40px 0;
 }
 
 .un-ordered-list li {
-  padding: 2px 0;
-}
-
-.mt-5 {
-  margin-top: 15px;
+  padding: 4px 0;
 }
 
 .fs17 {
@@ -90,9 +111,26 @@
 }
 
 .sub-un-ordered-list {
+  margin-top: 0 !important;
   padding-left: 6vh;
 }
 
 .text-white {
   color: #f3f3f3;
+}
+
+.page-not-found {
+  font-family: "VT323", monospace;
+  font-size: 26px;
+}
+
+.git-master {
+  text-decoration: none !important;
+  color: #f3f3f3;
+  display: inline-block;
+}
+
+.git-master > svg {
+  font-size: 15px;
+  vertical-align: bottom;
 }

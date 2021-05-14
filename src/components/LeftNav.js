@@ -1,3 +1,5 @@
+import "./LeftNav.css";
+
 import {
   VscExtensions,
   VscHome,
@@ -21,74 +23,41 @@ export default function LeftNav() {
     <>
       <ul className="left-nav">
         {/* home */}
-        <li className="left-nav-item">
-          {activeRoute === "" ? (
-            <Link
-              to="/"
-              className="left-nav-active"
-              onClick={() => dispatch(changeRoute(""))}
-              data-tip="Home"
-            >
-              <VscHome className="left-nav-icon " />
-              <ReactTooltip />
-            </Link>
-          ) : (
-            <Link
-              to="/"
-              onClick={() => dispatch(changeRoute(""))}
-              data-tip="Home"
-            >
-              <VscHome className="left-nav-icon " />
-              <ReactTooltip />
-            </Link>
-          )}
+        <li className="left-nav-item mt-0">
+          <Link
+            to="/"
+            className={activeRoute === "" ? "left-nav-active" : ""}
+            onClick={() => dispatch(changeRoute(""))}
+            data-tip="Home"
+          >
+            <VscHome className="left-nav-icon " />
+            <ReactTooltip />
+          </Link>
         </li>
 
         {/* skills */}
         <li className="left-nav-item">
-          {activeRoute === "skills" ? (
-            <Link
-              to="/skills"
-              className="left-nav-active"
-              data-tip="Skills"
-              onClick={() => dispatch(changeRoute("skills"))}
-            >
-              <VscCode className="left-nav-icon" />
-              <ReactTooltip />
-            </Link>
-          ) : (
-            <Link
-              to="/skills"
-              data-tip="Skills"
-              onClick={() => dispatch(changeRoute("skills"))}
-            >
-              <VscCode className="left-nav-icon" />
-              <ReactTooltip />
-            </Link>
-          )}
+          <Link
+            to="/skills"
+            className={activeRoute === "skills" ? "left-nav-active" : ""}
+            data-tip="Skills"
+            onClick={() => dispatch(changeRoute("skills"))}
+          >
+            <VscCode className="left-nav-icon" />
+            <ReactTooltip />
+          </Link>
         </li>
         {/* Projects */}
         <li className="left-nav-item">
-          {activeRoute === "projects" ? (
-            <Link
-              to="/projects"
-              data-tip="Projects"
-              className="left-nav-active"
-              onClick={() => dispatch(changeRoute("projects"))}
-            >
-              <VscExtensions className="left-nav-icon" />
-              <ReactTooltip />
-            </Link>
-          ) : (
-            <Link
-              to="/projects"
-              data-tip="Projects"
-              onClick={() => dispatch(changeRoute("projects"))}
-            >
-              <VscExtensions className="left-nav-icon" />
-              <ReactTooltip />
-            </Link>
-          )}
+          <Link
+            to="/projects"
+            className={activeRoute === "projects" ? "left-nav-active" : ""}
+            data-tip="Projects"
+            onClick={() => dispatch(changeRoute("projects"))}
+          >
+            <VscExtensions className="left-nav-icon" />
+            <ReactTooltip />
+          </Link>
         </li>
         {/* gmail */}
         <li className="left-nav-item">
@@ -144,30 +113,19 @@ export default function LeftNav() {
         <ul className="left-nav">
           {/* about */}
           <li className="left-nav-item">
-            {activeRoute === "about" ? (
-              <Link
-                to="/about"
-                data-tip="About"
-                className="left-nav-active"
-                onClick={() => dispatch(changeRoute("about"))}
-              >
-                <IoPersonCircleOutline className="left-nav-icon " />
-                <ReactTooltip />
-              </Link>
-            ) : (
-              <Link
-                to="/about"
-                data-tip="About"
-                onClick={() => dispatch(changeRoute("about"))}
-              >
-                <IoPersonCircleOutline className="left-nav-icon " />
-                <ReactTooltip />
-              </Link>
-            )}
+            <Link
+              to="/about"
+              className={activeRoute === "about" ? "left-nav-active" : ""}
+              data-tip="About"
+              onClick={() => dispatch(changeRoute("about"))}
+            >
+              <IoPersonCircleOutline className="left-nav-icon " />
+              <ReactTooltip />
+            </Link>
           </li>
           {/* setting */}
           <li className="left-nav-item">
-            <a href="#home" data-tip="Setting">
+            <a href="#home" data-tip="Upcoming">
               <VscSettingsGear className="left-nav-icon " />
               <ReactTooltip />
             </a>
