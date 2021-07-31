@@ -1,26 +1,28 @@
 import "./Style.css";
 import { changeRoute } from "./../actions/index";
 import { useDispatch } from "react-redux";
+import { EXPERIENCE_DETAILS } from "../common/constant";
 
-export default function Experience() {
+const Experience = () => {
   const dispatch = useDispatch();
   dispatch(changeRoute("experience"));
-  return (
-    <>
-      <div className="route-panel">
-        <h1 className="heading">Code-Gurukul</h1>
+
+  const cart = (data, index) => {
+    return (
+      <div key={index}>
+        <h1 className="heading">{data.company_name}</h1>
         <div className="mt-5">
           <ul className="un-ordered-list fs17">
             <li>
-              <span className="text-white">Role :</span> Software Developer
-              Intern
+              <span className="text-white">Role : </span> {data.role}
             </li>
             <li>
-              <span className="text-white">Technologies :</span>HTML, CSS,
-              Bootstrap, Javascript, PHP, MYSQL
+              <span className="text-white">Technologies : </span>
+              {data.technologies}
             </li>
             <li>
-              <span className="text-white">Duration :</span> 6 Months
+              <span className="text-white">Duration : </span>
+              {data.duration}
             </li>
             {/* <li>
               <span className="text-white">Description :</span>
@@ -31,6 +33,16 @@ export default function Experience() {
           </ul>
         </div>
       </div>
+    );
+  };
+
+  return (
+    <>
+      <div className="route-panel">
+        {EXPERIENCE_DETAILS.map((data, index) => cart(data, index))}
+      </div>
     </>
   );
-}
+};
+
+export default Experience;

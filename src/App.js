@@ -14,8 +14,9 @@ import PageNotFound from "./routes/PageNotFound";
 
 import LeftNav from "./components/LeftNav";
 import RightNav from "./components/RightNav";
+import { GISTS_LINK } from "./common/constant";
 
-function App() {
+const App = () => {
   return (
     <Router>
       <div className="top-panel">Alok Shete | Portfolio</div>
@@ -49,7 +50,7 @@ function App() {
       </div>
       <div className="footer-panel">
         <a
-          href="https://gist.github.com/alok-shete"
+          href={GISTS_LINK}
           rel="noreferrer"
           target="_blank"
           className="git-master"
@@ -59,6 +60,6 @@ function App() {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

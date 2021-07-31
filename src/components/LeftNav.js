@@ -15,10 +15,16 @@ import { Link } from "react-router-dom";
 import ReactTooltip from "react-tooltip";
 
 import { changeRoute } from "./../actions/index";
+import {
+  GITHUB_LINK,
+  GMAIL_LINK,
+  INSTAGRAM_LINK,
+  LINKEDIN_LINK,
+} from "../common/constant";
 
-export default function LeftNav() {
+const LeftNav = () => {
   const dispatch = useDispatch();
-  const activeRoute = useSelector((state) => state.chnageRoute);
+  const activeRoute = useSelector((state) => state.changeRoute);
   return (
     <>
       <ul className="left-nav">
@@ -62,8 +68,8 @@ export default function LeftNav() {
         {/* gmail */}
         <li className="left-nav-item">
           <a
-            href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=shetealok@gmail.com&amp;tf=1"
-            title="Reach out directly to the co-founders"
+            href={GMAIL_LINK}
+            title="Reach out directly to me"
             rel="noreferrer"
             target="_blank"
             data-tip="Gmail"
@@ -75,7 +81,7 @@ export default function LeftNav() {
         {/* linkedin */}
         <li className="left-nav-item">
           <a
-            href="https://www.linkedin.com/in/alok-shete/"
+            href={LINKEDIN_LINK}
             rel="noreferrer"
             target="_blank"
             data-tip="Linkedin"
@@ -87,7 +93,7 @@ export default function LeftNav() {
         {/* github */}
         <li className="left-nav-item">
           <a
-            href="https://github.com/alok-shete/"
+            href={GITHUB_LINK}
             rel="noreferrer"
             target="_blank"
             data-tip="Github"
@@ -98,7 +104,7 @@ export default function LeftNav() {
         </li>
         <li className="left-nav-item">
           <a
-            href="https://www.instagram.com/alok_shete/"
+            href={INSTAGRAM_LINK}
             rel="noreferrer"
             target="_blank"
             data-tip="Instagram"
@@ -134,4 +140,6 @@ export default function LeftNav() {
       </div>
     </>
   );
-}
+};
+
+export default LeftNav;

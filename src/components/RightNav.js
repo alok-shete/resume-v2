@@ -7,9 +7,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { changeRoute } from "../actions/index";
-export default function RightNav() {
+const RightNav = () => {
   const dispatch = useDispatch();
-  const activeRoute = useSelector((state) => state.chnageRoute);
+  const activeRoute = useSelector((state) => state.changeRoute);
   return (
     <div className="right-panel-scroll-menu">
       <Link
@@ -89,4 +89,6 @@ export default function RightNav() {
       </Link>
     </div>
   );
-}
+};
+
+export default RightNav;

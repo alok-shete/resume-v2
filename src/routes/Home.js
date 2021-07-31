@@ -2,7 +2,12 @@ import "./Style.css";
 import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import { VscGithubInverted } from "react-icons/vsc";
-export default function Home() {
+import {
+  GITHUB_LINK,
+  GITHUB_USER_NAME,
+  HOME_TYPING_TEXT,
+} from "../common/constant";
+const Home = () => {
   return (
     <>
       <div className="content-center">
@@ -11,26 +16,17 @@ export default function Home() {
           <strong>Alok Shete</strong>
           <br />
           <ReactTypingEffect
-            text={[
-              "Full Stack Web Developer",
-              "Problem Solver",
-              "MREN Stack Developer",
-              "Quick Learner",
-              "MEAN Stack Developer",
-            ]}
+            text={HOME_TYPING_TEXT}
             speed={100}
             eraseSpeed={50}
             eraseDelay={1000}
             typingDelay={500}
           />
           <div>
-            <a
-              href="https://github.com/alok-shete/"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={GITHUB_LINK} rel="noreferrer" target="_blank">
               <button className="btn-git">
-                <VscGithubInverted className="btn-git-logo" /> alok-shete
+                <VscGithubInverted className="btn-git-logo" />{" "}
+                {GITHUB_USER_NAME}
               </button>
             </a>
           </div>
@@ -38,4 +34,6 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;

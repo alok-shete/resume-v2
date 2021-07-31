@@ -2,7 +2,7 @@ import changeRouteReducer from "./changeRoute";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-  chnageRoute: changeRouteReducer,
+  changeRoute: changeRouteReducer,
 });
 
 export default allReducers;

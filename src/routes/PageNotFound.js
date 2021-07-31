@@ -1,4 +1,4 @@
-export default function PageNotFound() {
+const PageNotFound = () => {
   return (
     <>
       <div className="content-center">
@@ -11,4 +11,6 @@ export default function PageNotFound() {
       </div>
     </>
   );
-}
+};
+
+export default PageNotFound;
