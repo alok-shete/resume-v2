@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GoGist } from "react-icons/go";
 
@@ -15,8 +15,17 @@ import PageNotFound from "./routes/PageNotFound";
 import LeftNav from "./components/LeftNav";
 import RightNav from "./components/RightNav";
 import { GISTS_LINK } from "./common/constant";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const mainViewRef = useRef();
+
+  const activeRoute = useSelector((state) => state.changeRoute);
+
+  useEffect(() => {
+    mainViewRef.current?.scrollTo(0, 0);
+  }, [activeRoute]);
+
   return (
     <Router>
       <div className="top-panel">Alok Shete | Portfolio</div>
@@ -26,7 +35,7 @@ const App = () => {
       <div className="right-panel">
         <RightNav />
       </div>
-      <div className="main-panel">
+      <div ref={mainViewRef} className="main-panel">
         <Switch>
           <Route path="/about">
             <About />
