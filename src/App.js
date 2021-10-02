@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { GoGist } from "react-icons/go";
 
